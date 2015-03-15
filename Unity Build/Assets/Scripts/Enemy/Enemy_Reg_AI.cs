@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using System.Collections;
 
@@ -91,16 +90,16 @@ public class Enemy_Reg_AI : MonoBehaviour
 		playerPosition = new Vector2 (player.transform.position.x, player.transform.position.y);
 		float relativePos = player.transform.position.x - transform.position.x;
 
-		if (player.transform.position.x > transform.position.x) {
+		if (relativePos <= range) {
+			move = 0f;
+			//Attack Animation
+		} else if (player.transform.position.x > transform.position.x) {
 			move = 0f;
 			move++;
 		} else if (player.transform.position.x < transform.position.x) {
 			move = 0f;
 			move--;
-		} else if (relativePos <= range) {
-			move = 0f;
-			//Attack Animation
-		}
+		} 
 	}
 }
  
