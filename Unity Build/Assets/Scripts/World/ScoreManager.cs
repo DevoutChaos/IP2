@@ -2,12 +2,6 @@
 using System.Collections;
 using UnityEngine.UI;
 
-/// <summary>
-/// Score manager.
-/// Displays player score
-/// allows points to be added
-/// </summary>
-
 public class ScoreManager : MonoBehaviour {
 
 	public static int score;
