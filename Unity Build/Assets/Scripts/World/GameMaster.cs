@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Game master.
+/// Allows players and enemies to die as well as respawning the player
+/// </summary>
+
 public class GameMaster : MonoBehaviour 
 {
 
