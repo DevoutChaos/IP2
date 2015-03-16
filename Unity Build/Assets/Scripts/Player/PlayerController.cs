@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Player controller.
+/// Allows the player to move, jump and crouch
+/// Assigns what the player can see as ground
+/// </summary>
+
 public class PlayerController : MonoBehaviour
 {
 	
@@ -72,13 +78,13 @@ public class PlayerController : MonoBehaviour
 			//Applies the jump force
 			rigidbody2D.AddForce (new Vector2 (0, jumpForce));
 		}
-
+		
 		anim.SetBool ("Crouch", crouched);
 		// Crouches when key is pressed otherwise stands
 		if (grounded && Input.GetButtonDown ("Fire3")) {
 			Crouch ();
 		}
-
+		
 		if (grounded && crouched && Input.GetButtonUp ("Fire3")) {
 			Stand ();
 		}

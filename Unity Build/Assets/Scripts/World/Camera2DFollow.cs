@@ -1,6 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Camera2 D follow.
+/// Allows the camera to follow the target object (player)
+/// Can clamp camera so it doesn't go below a certain point
+/// </summary>
+
 public class Camera2DFollow : MonoBehaviour {
 	
 	public Transform target;

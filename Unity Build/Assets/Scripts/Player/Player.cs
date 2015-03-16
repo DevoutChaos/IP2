@@ -2,6 +2,12 @@
 using System.Collections;
 using UnityEngine.UI;
 
+/// <summary>
+/// Player.
+/// Sets up and assigns value for healthbar
+/// Allows player to take damage
+/// </summary>
+
 public class Player : MonoBehaviour 
 {
 
