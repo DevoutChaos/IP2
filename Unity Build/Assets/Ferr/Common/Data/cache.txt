@@ -11,6 +11,8 @@ Assets/Ferr/2DTerrain/Examples/Assets/FerrlibLogoSmall.prefab
 Assets/Ferr/2DTerrain/Examples/Assets/Tumbleweed.prefab
 Assets/Ferr/2DTerrain/TerrainMaterials/SandTerrainMaterial.prefab
 Assets/Level1_Grass.prefab
+Assets/Player.prefab
+Assets/PreFabs/Player.prefab
 
 [Ferr2DT_PathTerrain]
 Assets/Ferr/2DTerrain/TerrainMaterials/RockTerrainMaterial.prefab
@@ -24,3 +26,5 @@ Assets/Ferr/2DTerrain/Examples/Assets/FerrlibLogoSmall.prefab
 Assets/Ferr/2DTerrain/Examples/Assets/Tumbleweed.prefab
 Assets/Ferr/2DTerrain/TerrainMaterials/SandTerrainMaterial.prefab
 Assets/Level1_Grass.prefab
+Assets/Player.prefab
+Assets/PreFabs/Player.prefab
