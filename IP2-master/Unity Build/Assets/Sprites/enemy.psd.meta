@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: 7bcbdf7ec45c94d15a2bf095d3e44b84
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Head
+    21300002: RArm
+    21300004: LArm
+    21300006: Cloth1
+    21300008: Hips
+    21300010: LThigh
+    21300012: RThigh
+    21300014: LForearm
+    21300016: RForearm
+    21300018: Waist
+    21300020: Cloth2
+    21300022: Chest
+    21300024: RLeg
+    21300026: LLeg
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Head
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 2799
+        width: 809
+        height: 535
+      alignment: 9
+      pivot: {x: .481702685, y: .372725606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RArm
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 2637
+        width: 304
+        height: 694
+      alignment: 9
+      pivot: {x: .675293386, y: .657837272}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LArm
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 2696
+        width: 268
+        height: 588
+      alignment: 9
+      pivot: {x: .635127783, y: .761814237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cloth1
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 2708
+        width: 244
+        height: 626
+      alignment: 9
+      pivot: {x: .621332884, y: .812131047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hips
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 2812
+        width: 632
+        height: 405
+      alignment: 9
+      pivot: {x: .495315731, y: .755847335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LThigh
+      rect:
+        serializedVersion: 2
+        x: 2406
+        y: 1724
+        width: 342
+        height: 778
+      alignment: 9
+      pivot: {x: .370153606, y: .773981035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RThigh
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 1686
+        width: 371
+        height: 844
+      alignment: 9
+      pivot: {x: .571818829, y: .784125328}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LForearm
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 1844
+        width: 292
+        height: 748
+      alignment: 9
+      pivot: {x: .489861488, y: .872043192}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RForearm
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 1835
+        width: 283
+        height: 742
+      alignment: 9
+      pivot: {x: .437233001, y: .879041791}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Waist
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 2080
+        width: 488
+        height: 412
+      alignment: 9
+      pivot: {x: .52426666, y: .183828995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cloth2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 362
+        width: 1027
+        height: 1455
+      alignment: 9
+      pivot: {x: .413435251, y: .884561837}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Chest
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 927
+        width: 497
+        height: 762
+      alignment: 9
+      pivot: {x: .577437997, y: .200840428}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RLeg
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 577
+        width: 350
+        height: 936
+      alignment: 9
+      pivot: {x: .466167003, y: .822620511}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LLeg
+      rect:
+        serializedVersion: 2
+        x: 2484
+        y: 576
+        width: 348
+        height: 862
+      alignment: 9
+      pivot: {x: .372392327, y: .901833355}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

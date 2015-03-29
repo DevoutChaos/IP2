@@ -5,7 +5,10 @@ using System.Collections;
 /// Player controller.
 /// Allows the player to move, jump and crouch
 /// Assigns what the player can see as ground
+<<<<<<< HEAD
 /// Allows player to climb any game object named "Ladder"
+=======
+>>>>>>> George_Assets
 /// </summary>
 
 public class PlayerController : MonoBehaviour
@@ -95,8 +98,13 @@ public class PlayerController : MonoBehaviour
 		{
 			Crouch ();
 		}
+<<<<<<< HEAD
 		if (grounded && crouched && Input.GetButtonUp ("Fire3")) 
 		{
+=======
+		
+		if (grounded && crouched && Input.GetButtonUp ("Fire3")) {
+>>>>>>> George_Assets
 			Stand ();
 		}
 
