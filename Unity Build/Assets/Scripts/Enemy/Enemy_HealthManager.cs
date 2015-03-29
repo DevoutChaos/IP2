@@ -9,6 +9,7 @@ public class Enemy_HealthManager : MonoBehaviour
 	public int enemyHealth = 100;
 	public Slider healthSlider;
 	public GameObject self;
+	public int damage = 0;
 	
 	// Use this for initialization
 	void Start ()
@@ -30,6 +31,13 @@ public class Enemy_HealthManager : MonoBehaviour
 			GameMaster.KillEnemy (this);
 			Debug.Log ("Killed enemy");
 		}
-		
 	}
+
+	public void OnTriggerEnter2D (Collider2D other)
+	{
+		if (other.gameObject.tag == "AttackPoint") {
+			enemyHealth -= damage;
+		}
+	}
+
 }
