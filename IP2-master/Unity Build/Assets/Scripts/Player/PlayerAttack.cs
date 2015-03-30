@@ -7,8 +7,8 @@ using System.Collections;
 /// Allows the player to attack enemies (target), and sets up the attack animation
 /// Once the "F" key is released, attacking ceases
 /// </summary>
-
-public class PlayerAttack : MonoBehaviour {
+public class PlayerAttack : MonoBehaviour 
+{
 	
 	public GameObject target;
 	
@@ -43,10 +43,9 @@ public class PlayerAttack : MonoBehaviour {
 		// If the player presses F, Attack
 		if (Input.GetKeyDown (KeyCode.F)) {
 			// Set attack animation
-			anim.SetBool ("Attack", attacking);
 			Attack ();
 		} 
-		else if (Input.GetKeyUp (KeyCode.F)) 
+		else if (Input.GetKeyUp(KeyCode.F)) 
 		{
 			hitPoint.enabled = false;
 			attacking = false;
@@ -55,9 +54,8 @@ public class PlayerAttack : MonoBehaviour {
 	
 	private void Attack()
 	{
-		hitPoint.enabled = true;
 		attacking = true;
-		/*
+		hitPoint.enabled = true;
 		// If the player hit box doesn't collide with an enemy, ignore it 
 		enemy = (Enemy_HealthManager)target.GetComponent<Enemy_HealthManager> ();
 		if (enemy == null)
@@ -66,9 +64,6 @@ public class PlayerAttack : MonoBehaviour {
 		// Damage enemy
 		enemy.EnemyDamage (attackStrength);
 		Debug.Log ("Did " + attackStrength + " to Enemy!");
-		*/
-		
-		StartCoroutine (Cooldown ());
 	}
 	
 	IEnumerator Cooldown()

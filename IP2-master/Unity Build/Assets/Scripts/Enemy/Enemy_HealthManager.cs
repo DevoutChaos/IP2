@@ -27,16 +27,10 @@ public class Enemy_HealthManager : MonoBehaviour
 		// Health - damage
 		enemyHealth -= damage;
 		// If the enemt's health is less than 0, kill them
-		if (enemyHealth <= 0) {
+		if (enemyHealth <= 0) 
+		{
 			GameMaster.KillEnemy (this);
 			Debug.Log ("Killed enemy");
-		}
-	}
-
-	void OnTriggerEnter2D (Collider2D other)
-	{
-		if (other.gameObject.tag == "AttackPoint") {
-			enemyHealth -= damage;
 		}
 	}
 }
