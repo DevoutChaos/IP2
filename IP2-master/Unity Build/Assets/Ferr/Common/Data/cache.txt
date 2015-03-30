@@ -10,12 +10,12 @@ Assets/Ferr/2DTerrain/TerrainMaterials/ForegroundTerrainMaterial.prefab
 Assets/Ferr/2DTerrain/Examples/Assets/FerrlibLogoSmall.prefab
 Assets/Ferr/2DTerrain/Examples/Assets/Tumbleweed.prefab
 Assets/Ferr/2DTerrain/TerrainMaterials/SandTerrainMaterial.prefab
-Assets/PreFabs/Player.prefab
 Assets/Level1_Grass.prefab
 Assets/Ladder.prefab
 Assets/Castle_Wall.prefab
 Assets/Sprites/Player.prefab
 Assets/PreFabs/Enemy.prefab
+Assets/PreFabs/Player.prefab
 
 [Ferr2DT_PathTerrain]
 Assets/Ferr/2DTerrain/TerrainMaterials/ForestTerrainMaterial.prefab
@@ -28,9 +28,9 @@ Assets/Ferr/2DTerrain/TerrainMaterials/ForegroundTerrainMaterial.prefab
 Assets/Ferr/2DTerrain/Examples/Assets/FerrlibLogoSmall.prefab
 Assets/Ferr/2DTerrain/Examples/Assets/Tumbleweed.prefab
 Assets/Ferr/2DTerrain/TerrainMaterials/SandTerrainMaterial.prefab
-Assets/PreFabs/Player.prefab
 Assets/Level1_Grass.prefab
 Assets/Ladder.prefab
 Assets/Castle_Wall.prefab
 Assets/Sprites/Player.prefab
 Assets/PreFabs/Enemy.prefab
+Assets/PreFabs/Player.prefab

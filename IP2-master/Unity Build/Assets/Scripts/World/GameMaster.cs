@@ -25,16 +25,16 @@ public class GameMaster : MonoBehaviour
 		
 	}
 	
-	/*public IEnumerator PlayerRespawn()
+	public IEnumerator PlayerRespawn()
 	{
 		yield return new WaitForSeconds (delay);
 		Instantiate (playerPrefab, spawnPoint.position, spawnPoint.rotation);
-	}*/
+	}
 	
 	public static void KillPlayer(Player player)
 	{
 		Destroy (player.gameObject);
-		//gameMaster.StartCoroutine (gameMaster.PlayerRespawn());
+		gameMaster.StartCoroutine (gameMaster.PlayerRespawn());
 	}
 
 	public static void KillEnemy(Enemy_HealthManager enemy)

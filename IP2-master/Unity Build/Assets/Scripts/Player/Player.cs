@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
 	// Health variables
 	public int maxHealth = 100;
 	public int health { get; private set;}
-	public Slider healthSlider;
 	
 	// Damage cooldown variables
 	private bool takingDamage;
@@ -37,12 +36,20 @@ public class Player : MonoBehaviour
 	
 	void Start()
 	{
+		// Healthbar y position
+		YPos = healthbar.localPosition.y;
+		// Healthbar at 100% position
+		maxXPos = healthbar.localPosition.x;
+		// Healthbar at 0 position
+		minXPos = healthbar.localPosition.x - healthbar.rect.width;
+		
+		onCooldown = false;
+		takingDamage = false;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		Debug.Log ("HI");
 		// If the player falls below the boundary, they take 1792 damage
 		if (transform.position.y <= fallBoundary) 
 		{
