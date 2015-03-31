@@ -15,8 +15,13 @@ public class Enemy_Reg_AI : MonoBehaviour
 	public bool aggro = false;
 	public Vector2 playerPosition;
 	GameObject player;
-	public float range = 1.0f;
+	public float range = 5f;
 	public float relativePos;
+
+	//Attack
+	public int attackStrength;
+	public GameObject hitPoint;
+	Player playerHealth;
 
 	//Animator
 	Animator anim;
@@ -43,6 +48,9 @@ public class Enemy_Reg_AI : MonoBehaviour
 	//Call Update once per frame
 	void Update ()
 	{
+		//Attack Animation
+		anim.SetBool ("Attack", attack);
+
 		if (patrolling) {
 			Patrol ();
 		} else if (aggro) {
@@ -80,6 +88,7 @@ public class Enemy_Reg_AI : MonoBehaviour
 
 	void Patrol ()
 	{
+		attack = true;
 		if (moveRight == true) {
 			move = 0f;
 			move++;
@@ -97,8 +106,6 @@ public class Enemy_Reg_AI : MonoBehaviour
 
 		if (0 < relativePos && relativePos < range) {
 			move = 0f;
-			//Attack Animation
-			anim.SetBool ("Attack", attack);
 		} else if (player.transform.position.x > transform.position.x && relativePos > range) {
 			move = 0f;
 			move++;
