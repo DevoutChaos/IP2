@@ -16,6 +16,9 @@ Assets/Ladder.prefab
 Assets/PreFabs/Enemy.prefab
 Assets/Castle_Wall.prefab
 Assets/Sprites/Player.prefab
+Assets/PreFabs/Treasure_Chest.prefab
+Assets/PreFabs/Ladder.prefab
+Assets/PreFabs/Coin.prefab
 
 [Ferr2DT_PathTerrain]
 Assets/Ferr/2DTerrain/TerrainMaterials/ForestTerrainMaterial.prefab
@@ -34,3 +37,6 @@ Assets/Ladder.prefab
 Assets/PreFabs/Enemy.prefab
 Assets/Castle_Wall.prefab
 Assets/Sprites/Player.prefab
+Assets/PreFabs/Treasure_Chest.prefab
+Assets/PreFabs/Ladder.prefab
+Assets/PreFabs/Coin.prefab

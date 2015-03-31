@@ -5,7 +5,6 @@ using System.Collections;
 /// Player controller.
 /// Allows the player to move, jump and crouch
 /// Assigns what the player can see as ground
-
 /// Allows player to climb any game object named "Ladder"
 /// </summary>
 
@@ -35,7 +34,7 @@ public class PlayerController : MonoBehaviour
 	public CircleCollider2D circleCollider;
 
 	// Ladder variables
-	GameObject ladder;
+	GameObject[] ladder;
 	public bool isClimbing = false;
 	public float climb;
 	public float climbSpeed = 4;
@@ -47,7 +46,7 @@ public class PlayerController : MonoBehaviour
 		//Set-up for Animator
 		anim = GetComponent<Animator> ();
 		//Find Ladders
-		ladder = GameObject.Find ("Ladder");
+		ladder = GameObject.FindGameObjectsWithTag ("Ladder");
 	}
 	
 	// Update is called once per frame
@@ -82,7 +81,8 @@ public class PlayerController : MonoBehaviour
 	void Update ()
 	{
 		// Sets Jump key and animation, also prevents double jump
-		if (grounded && Input.GetButtonDown ("Jump")) {
+		if (grounded && Input.GetButtonDown ("Jump")) 
+		{
 			//Makes sure the animation changes to an aerial one
 			anim.SetBool ("Ground", false);
 			//Applies the jump force
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
 	// Enter Ladder, turn gravity off
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (other.gameObject == ladder) 
+		if (other.gameObject.tag == "ladder") 
 		{
 			isClimbing = true;
 			rigidbody2D.gravityScale = 0;
@@ -144,7 +144,7 @@ public class PlayerController : MonoBehaviour
 	// Exit Ladder, turn gravity back on
 	void OnTriggerExit2D (Collider2D other)
 	{
-		if (other.gameObject == ladder) 
+		if (other.gameObject.tag == "ladder") 
 		{
 			isClimbing = false;
 			rigidbody2D.gravityScale = gravity;
