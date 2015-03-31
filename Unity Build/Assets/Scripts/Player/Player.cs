@@ -8,11 +8,7 @@ using UnityEngine.UI;
 /// Allows player to take damage
 /// </summary>
 
-<<<<<<< HEAD
 public class Player : MonoBehaviour
-=======
-public class Player : MonoBehaviour 
->>>>>>> George_Assets
 {
 
 	// Minimum y position the player can be at without dying

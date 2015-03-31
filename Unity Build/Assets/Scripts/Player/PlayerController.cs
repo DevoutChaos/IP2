@@ -5,10 +5,7 @@ using System.Collections;
 /// Player controller.
 /// Allows the player to move, jump and crouch
 /// Assigns what the player can see as ground
-<<<<<<< HEAD
 /// Allows player to climb any game object named "Ladder"
-=======
->>>>>>> George_Assets
 /// </summary>
 
 public class PlayerController : MonoBehaviour
@@ -84,8 +81,7 @@ public class PlayerController : MonoBehaviour
 	void Update ()
 	{
 		// Sets Jump key and animation, also prevents double jump
-		if (grounded && Input.GetButtonDown ("Jump")) 
-		{
+		if (grounded && Input.GetButtonDown ("Jump")) {
 			//Makes sure the animation changes to an aerial one
 			anim.SetBool ("Ground", false);
 			//Applies the jump force
@@ -94,23 +90,16 @@ public class PlayerController : MonoBehaviour
 		
 		anim.SetBool ("Crouch", crouched);
 		// Crouches when key is pressed otherwise stands
-		if (grounded && Input.GetButtonDown ("Fire3")) 
-		{
+		if (grounded && Input.GetButtonDown ("Fire3")) {
 			Crouch ();
 		}
-<<<<<<< HEAD
-		if (grounded && crouched && Input.GetButtonUp ("Fire3")) 
-		{
-=======
-		
 		if (grounded && crouched && Input.GetButtonUp ("Fire3")) {
->>>>>>> George_Assets
+
 			Stand ();
 		}
 
 		// Climb Ladder
-		if (isClimbing) 
-		{
+		if (isClimbing) {
 			climb = Input.GetAxis ("Vertical");
 			rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x, climb * climbSpeed);
 		}
@@ -139,20 +128,18 @@ public class PlayerController : MonoBehaviour
 	}
 
 	// Enter Ladder, turn gravity off
-	void OnTriggerEnter2D(Collider2D other)
+	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (other.gameObject == ladder) 
-		{
+		if (other.gameObject == ladder) {
 			isClimbing = true;
 			rigidbody2D.gravityScale = 0;
 		}
 	}
 
 	// Exit Ladder, turn gravity back on
-	void OnTriggerExit2D(Collider2D other)
+	void OnTriggerExit2D (Collider2D other)
 	{
-		if (other.gameObject == ladder) 
-		{
+		if (other.gameObject == ladder) {
 			isClimbing = false;
 			rigidbody2D.gravityScale = gravity;
 		}
