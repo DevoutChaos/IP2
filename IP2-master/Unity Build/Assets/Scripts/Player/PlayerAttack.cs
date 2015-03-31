@@ -15,7 +15,7 @@ public class PlayerAttack : MonoBehaviour
 	// Declerations
 	Animator anim;
 	
-	private bool facingRight = false;
+	public BoxCollider2D hitPoint;
 	public bool attacking = false;
 	
 	// Use this for initialization
@@ -24,6 +24,7 @@ public class PlayerAttack : MonoBehaviour
 		// Set up animator
 		anim = GetComponent<Animator> ();
 		// Disable hitbox so it isn't constantly attacking
+		hitPoint.enabled = false;
 		attacking = false;
 	}
 	
@@ -39,12 +40,14 @@ public class PlayerAttack : MonoBehaviour
 		} 
 		else if (Input.GetKeyUp(KeyCode.F)) 
 		{
+			hitPoint.enabled = false;
 			attacking = false;
 		}
 	}
 	
 	private void Attack()
 	{
+		hitPoint.enabled = true;
 		attacking = true;
 
 		/*// If the player hit box doesn't collide with an enemy, ignore it 

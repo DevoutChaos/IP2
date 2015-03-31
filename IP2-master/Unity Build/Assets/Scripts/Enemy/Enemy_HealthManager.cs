@@ -8,7 +8,6 @@ public class Enemy_HealthManager : MonoBehaviour
 	//Declarations
 	public int enemyHealth = 100;
 	public Slider healthSlider;
-	public GameObject self;
 	public int damage;
 	
 	// Use this for initialization

@@ -91,23 +91,21 @@ public class PlayerController : MonoBehaviour
 		
 		anim.SetBool ("Crouch", crouched);
 		// Crouches when key is pressed otherwise stands
-		if (grounded && Input.GetButtonDown ("Fire3")) {
+		if (grounded && Input.GetButtonDown ("Fire3")) 
+		{
 			Crouch ();
 		}
-
-		if (grounded && crouched && Input.GetButtonUp ("Fire3")) {
-
 		
-			if (grounded && crouched && Input.GetButtonUp ("Fire3")) {
+		if (grounded && crouched && Input.GetButtonUp ("Fire3")) 
+		{
+			Stand ();
+		}
 
-				Stand ();
-			}
-
-			// Climb Ladder
-			if (isClimbing) {
-				climb = Input.GetAxis ("Vertical");
-				rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x, climb * climbSpeed);
-			}
+		// Climb Ladder
+		if (isClimbing) 
+		{
+			climb = Input.GetAxis ("Vertical");
+			rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x, climb * climbSpeed);
 		}
 	}
 	
@@ -136,7 +134,8 @@ public class PlayerController : MonoBehaviour
 	// Enter Ladder, turn gravity off
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (other.gameObject == ladder) {
+		if (other.gameObject == ladder) 
+		{
 			isClimbing = true;
 			rigidbody2D.gravityScale = 0;
 		}
@@ -145,7 +144,8 @@ public class PlayerController : MonoBehaviour
 	// Exit Ladder, turn gravity back on
 	void OnTriggerExit2D (Collider2D other)
 	{
-		if (other.gameObject == ladder) {
+		if (other.gameObject == ladder) 
+		{
 			isClimbing = false;
 			rigidbody2D.gravityScale = gravity;
 		}

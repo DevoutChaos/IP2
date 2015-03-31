@@ -8,8 +8,7 @@ public class Player : MonoBehaviour
 	public int fallBoundary = -20;
 	
 	// Healthbar variables
-	public RectTransform healthbar;
-	public Image healthbarColour;
+	public Slider playerHealth;
 	
 	// x and y positions for healthbar
 	private float YPos;
@@ -35,14 +34,7 @@ public class Player : MonoBehaviour
 	}
 	
 	void Start()
-	{
-		// Healthbar y position
-		YPos = healthbar.localPosition.y;
-		// Healthbar at 100% position
-		maxXPos = healthbar.localPosition.x;
-		// Healthbar at 0 position
-		minXPos = healthbar.localPosition.x - healthbar.rect.width;
-		
+	{	
 		onCooldown = false;
 		takingDamage = false;
 	}
@@ -50,18 +42,7 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		// If the player falls below the boundary, they take 1792 damage
-		if (transform.position.y <= fallBoundary) 
-		{
-			PlayerDamage (1792);
-		}
-		
-		// Update the healthbar
-		if (takingDamage = true) 
-		{
-			HandleHealth ();
-			takingDamage = false;
-		}
+		playerHealth.value = health;
 	}
 	
 	public void PlayerDamage(int damage)
@@ -94,26 +75,5 @@ public class Player : MonoBehaviour
 		yield return new WaitForSeconds (cooldownDelay);
 		boxcollider.enabled = true;
 	}
-	
-	private void HandleHealth()
-	{
-		// Get the current position of the healthbar
-		float currentXValue = MapValues (health, 0, maxHealth, minXPos, maxXPos);
-		// Move the healthbar to it's current posistion
-		healthbar.transform.localPosition = new Vector3 (currentXValue, YPos);
-		// Change the colour of the healthbar. From 100 it will go from green to red 
-		if (health >= maxHealth / 2) 
-		{
-			healthbarColour.color = new Color32 ((byte)MapValues (health, maxHealth / 2, maxHealth, 255, 0), 255, 0, 255); 
-		} else
-			healthbarColour.color = new Color32 (255, (byte)MapValues (health, 0, maxHealth / 2, 0, 255), 0, 255);
-		
-		
-	}
-	
-	private float MapValues(float health, float minHealth, float maxHealth, float minXPos, float maxXPos )
-	{
-		// Translate health to a position
-		return (health - minHealth) * (maxXPos - minXPos) / (maxHealth - minHealth) + minXPos; 
-	}
+
 }
