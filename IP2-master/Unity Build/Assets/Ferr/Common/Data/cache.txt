@@ -14,14 +14,14 @@ Assets/Level1_Grass.prefab
 Assets/PreFabs/Player.prefab
 Assets/Ladder.prefab
 Assets/PreFabs/Enemy.prefab
-Assets/Castle_Wall.prefab
 Assets/PreFabs/Treasure_Chest.prefab
+Assets/Sprites/Smoke1.prefab
 Assets/PreFabs/Coin.prefab
 Assets/Sprites/Banner.prefab
+Assets/Castle_Wall.prefab
 Assets/Sprites/Player.prefab
-Assets/PreFabs/Ladder.prefab
-Assets/Sprites/Smoke1.prefab
 Assets/Sprites/Smoke2.prefab
+Assets/PreFabs/Ladder.prefab
 
 [Ferr2DT_PathTerrain]
 Assets/Ferr/2DTerrain/TerrainMaterials/ForestTerrainMaterial.prefab
@@ -37,12 +37,12 @@ Assets/Ferr/2DTerrain/TerrainMaterials/SandTerrainMaterial.prefab
 Assets/Level1_Grass.prefab
 Assets/PreFabs/Player.prefab
 Assets/Ladder.prefab
-Assets/Sprites/Banner.prefab
 Assets/PreFabs/Enemy.prefab
-Assets/Castle_Wall.prefab
 Assets/PreFabs/Treasure_Chest.prefab
-Assets/PreFabs/Coin.prefab
-Assets/Sprites/Player.prefab
-Assets/PreFabs/Ladder.prefab
 Assets/Sprites/Smoke1.prefab
+Assets/PreFabs/Coin.prefab
+Assets/Sprites/Banner.prefab
+Assets/Castle_Wall.prefab
+Assets/Sprites/Player.prefab
 Assets/Sprites/Smoke2.prefab
+Assets/PreFabs/Ladder.prefab
