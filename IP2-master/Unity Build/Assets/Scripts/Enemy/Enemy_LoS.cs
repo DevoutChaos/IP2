@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Enemy_LoS : MonoBehaviour
 {
+	/*
+	 * This script uses code based on the tutorial/s found at
+	 * https://www.youtube.com/watch?v=cJj7-Sy03HQ
+	 */
 	//Declarations
 	public Transform sightStart;
 	public Transform sightEnd;

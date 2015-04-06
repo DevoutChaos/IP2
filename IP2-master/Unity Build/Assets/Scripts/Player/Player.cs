@@ -2,8 +2,13 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour 
+public class Player : MonoBehaviour
 {
+	/*
+	 * This script uses code based on the tutorial/s found at
+	 * http://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/using-the-ui-tools
+	 */
+
 	// Minimum y position the player can be at without dying
 	public int fallBoundary = -20;
 	
@@ -17,7 +22,7 @@ public class Player : MonoBehaviour
 	
 	// Health variables
 	public int maxHealth = 100;
-	public int health { get; private set;}
+	public int health { get; private set; }
 	
 	// Damage cooldown variables
 	private bool takingDamage;
@@ -27,41 +32,39 @@ public class Player : MonoBehaviour
 	// Player's boxcollider
 	public BoxCollider2D boxcollider;
 	
-	void Awake()
+	void Awake ()
 	{
 		// Sets health
 		health = maxHealth;
 	}
 	
-	void Start()
+	void Start ()
 	{	
 		onCooldown = false;
 		takingDamage = false;
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void Update ()
 	{
 		playerHealth.value = health;
 	}
 	
-	public void PlayerDamage(int damage)
+	public void PlayerDamage (int damage)
 	{
 		takingDamage = true;
 		
 		// Disable the box collider so the player doesn't take double damage
 		boxcollider.enabled = false;
 		// Start a cooldown period so the player doesn't keep taking damage
-		if (!onCooldown && health > 0) 
-		{
-			StartCoroutine(Cooldown());
+		if (!onCooldown && health > 0) {
+			StartCoroutine (Cooldown ());
 		}
 		
 		// Health - damage
 		health -= damage;
 		// If teh player's health is less than 0, kill them
-		if (health <= 0) 
-		{
+		if (health <= 0) {
 			GameMaster.KillPlayer (this);
 			Debug.Log ("WASTED");
 		}
@@ -69,7 +72,7 @@ public class Player : MonoBehaviour
 	}
 	
 	// Cooldown after damage so player doesn't take double damage
-	IEnumerator Cooldown()
+	IEnumerator Cooldown ()
 	{
 		// Wait and then re enable collider
 		yield return new WaitForSeconds (cooldownDelay);
